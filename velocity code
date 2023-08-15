@@ -1,0 +1,29 @@
+using System;
+
+namespace VelocityCalculatorApp
+{
+    class Program
+    {
+        static double CalculateFinalVelocity(double initialVelocity, double acceleration, double time)
+        {
+            double finalVelocity = initialVelocity + acceleration * time;
+            return finalVelocity;
+        }
+
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the initial velocity (m/s): ");
+            double initialVelocity = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter the acceleration (m/s^2): ");
+            double acceleration = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter the time (s): ");
+            double time = double.Parse(Console.ReadLine());
+
+            double finalVelocity = CalculateFinalVelocity(initialVelocity, acceleration, time);
+            Console.WriteLine($"The final velocity is {finalVelocity:.2f} m/s");
+        }
+    }
+}
+
